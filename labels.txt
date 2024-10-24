@@ -1,3 +1,4 @@
 0 Nike
 1 Mizuno
-2 Umbro
+2 Adidas
+3 Nenhuma marca

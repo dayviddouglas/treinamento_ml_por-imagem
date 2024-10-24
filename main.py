@@ -19,7 +19,7 @@ output_data = interpreter.get_tensor(output_details[0]['index'])
 num_classes = output_data.shape[1]  # Número de classes previsto pelo modelo
 
 
-classe_ajustada=["Nike", "Mizuno", "Umbro"]
+classe_ajustada=["Nike", "Mizuno", "Adidas", "Nenhuma marca"]
 # Gerar nomes de classes genéricos se não houver nomes fornecidos
 class_names = [f"Classe {i}" for i in classe_ajustada]
 
