@@ -18,22 +18,10 @@ interpreter.invoke()  # Execute uma inferência para obter a forma de saída
 output_data = interpreter.get_tensor(output_details[0]['index'])
 num_classes = output_data.shape[1]  # Número de classes previsto pelo modelo
 
-# Função para ler o conteúdo de um arquivo de texto
-def ler_arquivo(caminho_arquivo):
-    with open(caminho_arquivo, 'r') as arquivo:
-        conteudo = arquivo.read()
-    return conteudo
 
-# Exemplo de uso
-caminho_arquivo = 'labels.txt'  # Substitua pelo caminho do seu arquivo de texto
-conteudo_arquivo = ler_arquivo(caminho_arquivo)
-
-
-
-
-
+classe_ajustada=["Nike", "Mizuno", "Umbro"]
 # Gerar nomes de classes genéricos se não houver nomes fornecidos
-class_names = [f"Classe {i}" for i in range(num_classes)]
+class_names = [f"Classe {i}" for i in classe_ajustada]
 
 while True:
     # Ler frame da câmera
@@ -70,8 +58,8 @@ while True:
     # Exibir as probabilidades das demais classes
     y_offset = 60  # Posição inicial para exibir as outras classes
     for i, prob in enumerate(probabilities):
-        if i == result:
-            continue  # Pular a classe com maior probabilidade (já exibida)
+        # if i == result:
+        #     continue  # Pular a classe com maior probabilidade (já exibida)
         text = f"{class_names[i]}: {prob:.2f}"
         cv2.putText(frame, text, (10, y_offset), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 2)
         y_offset += 30  # Mover para a próxima linha para a próxima classe
@@ -86,3 +74,5 @@ while True:
 # Liberar a câmera e fechar as janelas
 cap.release()
 cv2.destroyAllWindows()
+
+
