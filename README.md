@@ -62,3 +62,9 @@ python main.py
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
+
+## Contato
+
+- Email: [dayvid_douglas@hotmail.com](mailto:dayvid_douglas@hotmail.com)
+- LinkedIn: [dayvid-douglas](https://www.linkedin.com/in/dayvid-douglas/)
+- GitHub: [Dayvid Douglas](https://github.com/dayviddouglas)
