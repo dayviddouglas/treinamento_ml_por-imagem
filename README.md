@@ -59,6 +59,10 @@ Para treinar o modelo, execute o script main.py:
 python main.py
 ```
 
+## Observações:
+
+- Ajuste o índice da câmera (cv2.VideoCapture(1)) se necessário. O índice varia conforme o dispositivo.
+
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
